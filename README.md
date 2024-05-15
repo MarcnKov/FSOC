@@ -9,7 +9,6 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 * **Transmitter:** Arduino-controlled laser diode for transmitting data encoded as light pulses.
 * **Receiver:** Arduino-based photodiode or phototransistor circuit for detecting and decoding the received light signals.
 * **Modulation:** Implementation of basic modulation schemes (e.g., On-Off Keying) for encoding data into light pulses.
-* **Error Detection/Correction:** Implementation of error detection and correction techniques to ensure reliable data transmission.
 
 **Components:**
 
@@ -31,6 +30,7 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 * Implement more advanced modulation schemes (e.g., Pulse Position Modulation).
 * Investigate the use of lasers for higher data rates and longer distances.
 * Explore the integration of FSO with other wireless technologies.
+* **Error Detection/Correction:** Implementation of error detection and correction techniques to ensure reliable data transmission.
 
 **Contributions:**
 
