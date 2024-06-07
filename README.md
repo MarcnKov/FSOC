@@ -15,11 +15,11 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 **Setup:**
 
 1. Install Arduino IDE, configure your Arduino board accordingly, I am using Arduino Nano with old bootloader, therefore the following:
-![alt text](images/conf.png "Arduino Settings")
+![alt text](images/conf.PNG "Arduino Settings")
 2. Connect Arduino to the PCBs as per below
-![alt text](images/RXTX.png "Arduino setup")
+![alt text](images/RXTX.jpg "Arduino setup")
 3. Upload code to the Arduinos and observe message at the RX 
-![alt text](images/RX_message.png "Received Message")
+![alt text](images/RX_message.jpg "Received Message")
 
 **Experiment:**
 
