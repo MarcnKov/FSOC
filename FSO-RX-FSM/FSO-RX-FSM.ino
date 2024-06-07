@@ -10,6 +10,7 @@ enum State
 #define REF_VOLTAGE                 5.0
 #define THRESHOLD_mV               0.05
 #define LOST_SAMPLES_TH           10000
+#define FREQUENCY                   500
 #define PHOTO_DIODE                  A3
 #define BYTE_LEN                      8
 #define __vo                   volatile
@@ -17,6 +18,8 @@ enum State
 char                             rxByte;
 const char       frameStart = B00111100;
 const char       frameEnd   = B00111110;
+const char       sync0Seq   = B00000000;
+const char       sync1Seq   = B10000000;
 
 State currentState          =   WAITING;
 __vo  boolean    rxState    =     false;
@@ -29,7 +32,7 @@ void RX_Data(void);
 void sync(void);
 char receiveByte(void);
 
-Timer t = Timer(500, clock);
+Timer t = Timer(FREQUENCY, clock);
 
 void setup()
 {
@@ -65,12 +68,12 @@ void loop()
 void RX_Data(void)
 {
   rxByte = receiveByte();
-  if (rxByte != frameStart && rxByte != frameEnd && rxByte != B00000000)
+  if (rxByte != frameStart && rxByte != frameEnd && rxByte != sync0Seq)
   {
     Serial.write(rxByte);
     currentState = RECEIVING;
   }
-  else if (rxByte == B00000000 || rxByte == B10000000)
+  else if (rxByte == sync0Seq || rxByte == sync1Seq)
   {
     currentState = SYNCING;
   }

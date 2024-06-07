@@ -8,18 +8,21 @@ enum State
   SENDING
 };
 
-#define BYTE_LEN    8
-#define LASER       4
+#define FREQUENCY   500
 #define PAYLOAD_LEN 100
+#define BYTE_LEN      8
+#define LASER         4
 
 State       currentState      = SYNCING;
 volatile    boolean txState   = false;
-const char  frameStart        = B00111100;
+const char  frameStart        = B00111100;  
 const char  frameEnd          = B00111110;
+const char  sync0Seq          = B00000000;
+const char  sync1Seq          = B10000000;
 
 void clock();
 
-Timer t = Timer(500, clock);
+Timer t = Timer(FREQUENCY, clock);
 
 void setup()
 {
@@ -118,11 +121,10 @@ void sendChar(char byte)
   }
 }
 
-
 void sync()
 { 
-  sendChar(B00000000);
-  sendChar(B10000000);
+  sendChar(sync0Seq);
+  sendChar(sync1Seq);
 
   currentState = SENDING;
 }
