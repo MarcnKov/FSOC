@@ -55,6 +55,7 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 * Implement more advanced modulation schemes (e.g., Pulse Position Modulation).
 * Investigate the use of lasers for higher data rates and longer distances.
 * Explore the integration of FSO with other wireless technologies.
+* **Error Detection/Correction:** Implement error detection and correction techniques to ensure reliable data transmission.
 
 **Credits:**
 
