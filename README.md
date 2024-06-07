@@ -33,10 +33,10 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
    * How does bandwidth change with increasing/decreasing payload length?
 
 * **Experiment with changing modulation parameters:**
-   > * Frame Start bits
-   > * Frame End bits
-   > * Sync0 Sequence bits
-   > * Sync1 Sequence bits
+   * Frame Start bits
+   * Frame End bits
+   * Sync0 Sequence bits
+   * Sync1 Sequence bits
 
 
 **Components:**
