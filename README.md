@@ -9,7 +9,7 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 - [x] **Transmitter:** Arduino-controlled laser diode for transmitting data encoded as light pulses.
 - [x] **Receiver:** Arduino-based photodiode or phototransistor circuit for detecting and decoding the received light signals.
 - [x] **Modulation:** Implementation of basic modulation schemes (e.g., On-Off Keying) for encoding data into light pulses.
-- [] **Error Detection/Correction:**  Implementation of error detection and correction techniques to ensure reliable data transmission.
+- []  **Error Detection/Correction:**  Implementation of error detection and correction techniques to ensure reliable data transmission.
 
 
 **Setup:**
@@ -19,21 +19,25 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 2. Connect Arduino to the PCBs as per below
 ![alt text](images/RXTX.jpg "Arduino setup")
 3. Upload code to the Arduinos and observe message at the RX 
-![alt text](images/RX_message.jpg "Received Message")
+![alt text](images/RX_message.PNG.jpg "Received Message")
 
 **Experiment:**
 
-* Experiment with varrying RX and TX frequency
-    What is the maximum TX frequency?
-* Experiment with varrying TX power
-    How does SNR changes varying TX power?
-* Experiment with varrying payload length
-    How does bandwith changes with increasing/decreasing payload length?
-* Experiment with changing
-    FrameStart bits
-    FrameEbd   bits
-    sync0Seq   bits
-    sync1Seq   bits
+* **Experiment with varying RX and TX frequency:**
+   * What is the maximum achievable TX frequency?
+
+* **Experiment with varying TX power:**
+   * How does SNR change with varying TX power?
+
+* **Experiment with varying payload length:**
+   * How does bandwidth change with increasing/decreasing payload length?
+
+* **Experiment with changing modulation parameters:**
+   > * Frame Start bits
+   > * Frame End bits
+   > * Sync0 Sequence bits
+   > * Sync1 Sequence bits
+
 
 **Components:**
 
