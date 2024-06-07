@@ -9,7 +9,7 @@ This repository contains Arduino sketches, circuit diagrams, and documentation d
 - [x] **Transmitter:** Arduino-controlled laser diode for transmitting data encoded as light pulses.
 - [x] **Receiver:** Arduino-based photodiode or phototransistor circuit for detecting and decoding the received light signals.
 - [x] **Modulation:** Implementation of basic modulation schemes (e.g., On-Off Keying) for encoding data into light pulses.
-- []  **Error Detection/Correction:**  Implementation of error detection and correction techniques to ensure reliable data transmission.
+- [ ]  **Error Detection/Correction:**  Implementation of error detection and correction techniques to ensure reliable data transmission.
 
 
 **Setup:**
